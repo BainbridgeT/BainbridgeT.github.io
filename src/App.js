@@ -4,40 +4,57 @@ import "./App.css";
 function App() {
   return (
     <div className="container">
-      {/* Logo and App Title */}
-      <img
-        src="https://example.com/compass-logo.png" // Replace with actual logo URL
-        alt="LoungeNavigator Logo"
-        className="logo"
-      />
-      <h1 className="title">LoungeNavigator</h1>
-      <p className="subtitle">
-        Find, explore, and enjoy the best airport lounges near you
-      </p>
-
-      {/* Feature Sliders */}
-      <div className="slider-container">
-        <div className="feature-item">
-          <h2 className="feature-title">Lounge Recommendations</h2>
-          <p className="feature-description">
-            Personalized recommendations based on your travel preferences
-          </p>
+      {/* Top Row - App Title and Social Links */}
+      <div className="top-bar">
+        {/* Logo + App Name */}
+        <div className="logo-title">
+          <img
+            src="AppIcon-40@3x.png" // Replace with actual logo URL
+            alt="LoungeNavigator Logo"
+            className="app-logo"
+          />
+          <h1 className="app-title">LoungeNavigator</h1>
         </div>
-        <div className="feature-item">
-          <h2 className="feature-title">Lounge Navigation</h2>
-          <p className="feature-description">
-            Find your lounge effortlessly with real-time directions
-          </p>
-        </div>
-        <div className="feature-item">
-          <h2 className="feature-title">Global Lounge Search</h2>
-          <p className="feature-description">
-            Discover airport lounges worldwide and check your access eligibility
-          </p>
+        <div className="social-links">
+          <a href="https://x.com/LoungeNavigator" target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+          {/* <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a> */}
         </div>
       </div>
-      {/* Bottom Text */}
-      <p className="bottom-text">Travel smarter. Relax faster.</p>
+
+      {/* Middle Section - Two Columns */}
+      <div className="middle-section">
+        <div className="main-content">
+          {/* Left Column - Text and Button */}
+          <div className="text-section">
+            <h2 className="headline">
+              Travel Smarter.
+              <br />
+              <span>Relax Faster.</span>
+            </h2>
+            <p className="description">
+              Discover the best airport lounges and navigate with ease.
+            </p>
+            <a className="download-button">
+              Coming to the app store soon!
+            </a>
+          </div>
+
+          {/* Right Column - iPhone Simulator Image */}
+          <div className="image-section">
+            <img
+              src="3475.png" // Replace with actual iPhone mockup image
+              alt="LoungeNavigator App Preview"
+              className="iphone-mockup"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Section - White Background */}
     </div>
   );
 }
