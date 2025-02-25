@@ -1,46 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* General Styling */
-
-/* General Styling */
-
 html, body {
   overflow-x: hidden; /* Hides horizontal scroll */
   width: 100vw; /* Ensures no extra width */
@@ -63,30 +20,32 @@ body {
   min-height: 50vh;
   background-color: #f7f7f7;
   font-family: Arial, sans-serif;
+  width: 100%;
+  position: relative; /* For positioning the mobile footer */
 }
 
 /* Top bar */
 .top-bar {
-  width: 99%;
+  width: 100%;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 0;
+  box-sizing: border-box;
 }
-
 
 /* Logo and Title */
 .logo-title {
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .app-logo {
   width: 60px; /* Adjust size as needed */
   height: auto;
   margin-right: 10px;
-  margin-left: 20px;
 }
 
 .app-title {
@@ -95,17 +54,64 @@ body {
   color: #264653;
 }
 
+/* Desktop social links */
+.social-links {
+  margin-right: 20px;
+}
+
 .social-links a {
   margin-left: 20px;
-  margin-right: 20px;
   text-decoration: none;
   font-size: 16px;
   color: #555;
   transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Underline effect for social links */
+.social-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #FF7E5E;
+  transition: width 0.3s ease;
 }
 
 .social-links a:hover {
-  color: orange;
+  color: #FF7E5E;
+}
+
+.social-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile social links - hidden by default */
+.mobile-social-links {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.mobile-social-links h4 {
+  margin-top: 20px;
+  color: #264653;
+}
+
+.mobile-social-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.mobile-social-links a:hover {
+  color: #FF7E5E;
 }
 
 /* Main content area */
@@ -113,22 +119,24 @@ body {
   display: flex;
   max-width: 1200px;
   width: 90%;
-  margin-top: 0px;
+  margin-top: 30px;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Left column */
 .text-section {
-  width: 60%;
+  width: 45%;
   text-align: left;
-  padding: 15px 80px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
 }
 
 .headline {
   font-size: 48px;
   font-weight: bold;
   color: #264653;
+  line-height: 1.2;
 }
 
 .headline span {
@@ -138,22 +146,50 @@ body {
 .description {
   font-size: 18px;
   color: #555;
-  margin-top: 10px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 .download-button {
   display: inline-block;
-  background-color: black;
+  background-color: #264653;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 24px;
   font-size: 18px;
-  border-radius: 6px;
-  margin-top: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transition: all 0.6s;
 }
 
 .download-button:hover {
   background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.download-button:hover::before {
+  left: 100%;
 }
 
 /* Right column */
@@ -161,73 +197,143 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards 0.3s;
 }
 
 .iphone-mockup {
   width: 300px;
   max-width: 100%;
   margin-top: 30px;
-
+  border-radius: 20px;
 }
 
-
-
-/* .slider-container::-webkit-scrollbar {
-  display: none; 
-} */
-
-/* .feature-item {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  min-width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  
+  .logo-title {
+    margin: 0 0 10px 0;
+    justify-content: center;
+  }
+  
+  /* Hide the desktop social links in the top bar on mobile */
+  .social-links {
+    display: none;
+  }
+  
+  /* Show mobile social links */
+  .mobile-social-links {
+    display: block;
+  }
+  
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .text-section, .image-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Ensure text is centered */
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .text-section {
+    order: 1;
+  }
+  
+  .image-section {
+    order: 2;
+    margin-top: 30px;
+  }
+  
+  .headline {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .description {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .download-button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .iphone-mockup {
+    width: 350px;
+    margin: 20px 0 30px 0;
+  }
 }
 
-.feature-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+/* Additional tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .headline {
+    font-size: 40px;
+  }
+  
+  .iphone-mockup {
+    width: 280px;
+  }
 }
 
-.feature-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 8px;
+/* Add smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
 }
 
-.feature-description {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.5;
-} */
+/* Add a subtle animation to the app mockup */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
-/* Bottom Text */
-/* .bottom-text {
-  margin-top: 40px;
-  font-size: 1.1rem;
-  color: #444;
-  font-weight: 500;
-} */
+.iphone-mockup {
+  animation: float 6s ease-in-out infinite;
+}
 
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .title {
-    font-size: 2.2rem;
+/* Animation for fade-in effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  .subtitle {
-    font-size: 1.2rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  .feature-item {
-    min-width: 250px;
-  }
+/* Add scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
-  .auth-button {
-    font-size: 1rem;
-    padding: 10px 18px;
-  }
-} */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
