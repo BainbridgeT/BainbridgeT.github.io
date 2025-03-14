@@ -1,6 +1,8 @@
+
 html, body {
   overflow-x: hidden; /* Hides horizontal scroll */
   width: 100vw; /* Ensures no extra width */
+
 }
 
 body {
@@ -19,7 +21,7 @@ body {
   justify-content: center;
   min-height: 50vh;
   background-color: #f7f7f7;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   width: 100%;
   position: relative; /* For positioning the mobile footer */
 }
@@ -43,10 +45,13 @@ body {
 }
 
 .app-logo {
-  width: 60px; /* Adjust size as needed */
+  max-width: 100px;
   height: auto;
-  margin-right: 10px;
+  transform: scale(3.5);
+  display: block;
+  margin-left: 60px; /* For desktop */
 }
+
 
 .app-title {
   font-size: 29px;
@@ -285,6 +290,11 @@ body {
     width: 350px;
     margin: 20px 0 30px 0;
   }
+
+  .app-logo {
+    margin: 0 auto; /* Center on small screens */
+    display: block;
+  }
 }
 
 /* Additional tablet-specific adjustments */
@@ -295,6 +305,20 @@ body {
   
   .iphone-mockup {
     width: 280px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    /* padding: 20px 10px; */
+  }
+
+  .app-logo {
+    margin: 0 auto; /* Center on small screens */
+    display: block;
+  }
+
+  .social-links {
+    margin: 0 auto;
   }
 }
 
