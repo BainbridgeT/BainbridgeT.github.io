@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [1.1.0] - 2025-04-04
+
+Feat: Added live clock overlay to phone preview
+
+Fix: Improved animation so overlay floats with device
+
+Fix: Minor style fixes for mobile responsiveness
+
+Feat: Improved follow us icons
+
+## [1.0.0] - 2025-02-24
+
+Initial website launch!
+
+Added lounge preview mockups 
+
+Mobile responsive layout
