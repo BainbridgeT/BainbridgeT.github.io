@@ -85,19 +85,17 @@ function App() {
               Coming to the app store soon!
             </a>
           </div>
-          <div className="image-section fade-in">
-            <div className="iphone-container">
-              <img
-                src="Image.png"
-                alt="LoungeNavigator App Preview"
-                className="iphone-mockup"
-              />
-              <div
-                id="live-time-overlay"
-                className="time-overlay"
-              ></div>
-            </div>
-          </div>
+          <div className="image-section fade-in flex justify-center">
+  <div className="iphone-container relative">
+    <img
+      src="Image.png"
+      alt="LoungeNavigator App Preview"
+      className="iphone-mockup"
+    />
+    <div id="live-time-overlay" className="time-overlay"></div>
+  </div>
+</div>
+
         </div>
       </div>
       
