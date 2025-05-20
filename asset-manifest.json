@@ -1,16 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.de37b364.css",
-    "main.js": "/static/js/main.af82abc1.js",
+    "main.css": "/static/css/main.31a91223.css",
+    "main.js": "/static/js/main.b4c1346e.js",
     "static/js/453.e5058880.chunk.js": "/static/js/453.e5058880.chunk.js",
     "static/media/Quicksand-Medium.ttf": "/static/media/Quicksand-Medium.9fd398f86ce80d968762.ttf",
+    "static/media/plus-jakarta-sans-latin-700-normal.woff": "/static/media/plus-jakarta-sans-latin-700-normal.5d9c35159b537a7ab2ac.woff",
+    "static/media/plus-jakarta-sans-latin-400-normal.woff": "/static/media/plus-jakarta-sans-latin-400-normal.742170ba1eaa818debf4.woff",
+    "static/media/plus-jakarta-sans-latin-ext-700-normal.woff": "/static/media/plus-jakarta-sans-latin-ext-700-normal.f315cfeaf12f4e4a02da.woff",
+    "static/media/plus-jakarta-sans-latin-ext-400-normal.woff": "/static/media/plus-jakarta-sans-latin-ext-400-normal.fdd0aaad6cc97296cc87.woff",
+    "static/media/plus-jakarta-sans-latin-700-normal.woff2": "/static/media/plus-jakarta-sans-latin-700-normal.1220a6d713e92fae64e9.woff2",
+    "static/media/plus-jakarta-sans-latin-400-normal.woff2": "/static/media/plus-jakarta-sans-latin-400-normal.f10df819e3eb244b1910.woff2",
+    "static/media/plus-jakarta-sans-latin-ext-700-normal.woff2": "/static/media/plus-jakarta-sans-latin-ext-700-normal.c73bc3d35b022131bb0e.woff2",
+    "static/media/plus-jakarta-sans-latin-ext-400-normal.woff2": "/static/media/plus-jakarta-sans-latin-ext-400-normal.799cd19791d77ae8c8b6.woff2",
+    "static/media/plus-jakarta-sans-vietnamese-700-normal.woff": "/static/media/plus-jakarta-sans-vietnamese-700-normal.347415c6a16cbf4ad37f.woff",
+    "static/media/plus-jakarta-sans-vietnamese-400-normal.woff": "/static/media/plus-jakarta-sans-vietnamese-400-normal.a238b12e2f27f7cf2215.woff",
+    "static/media/plus-jakarta-sans-vietnamese-700-normal.woff2": "/static/media/plus-jakarta-sans-vietnamese-700-normal.ace28b090ae58d16a14a.woff2",
+    "static/media/plus-jakarta-sans-vietnamese-400-normal.woff2": "/static/media/plus-jakarta-sans-vietnamese-400-normal.daf80899a38bf5376e0d.woff2",
+    "static/media/plus-jakarta-sans-cyrillic-ext-400-normal.woff": "/static/media/plus-jakarta-sans-cyrillic-ext-400-normal.b5a5809f1146f82b0b76.woff",
+    "static/media/plus-jakarta-sans-cyrillic-ext-700-normal.woff": "/static/media/plus-jakarta-sans-cyrillic-ext-700-normal.37b0dc916e99c4f1912b.woff",
+    "static/media/plus-jakarta-sans-cyrillic-ext-400-normal.woff2": "/static/media/plus-jakarta-sans-cyrillic-ext-400-normal.abab03049ded6f033309.woff2",
     "index.html": "/index.html",
-    "main.de37b364.css.map": "/static/css/main.de37b364.css.map",
-    "main.af82abc1.js.map": "/static/js/main.af82abc1.js.map",
+    "static/media/plus-jakarta-sans-cyrillic-ext-700-normal.woff2": "/static/media/plus-jakarta-sans-cyrillic-ext-700-normal.86bd0ae8e3692002fcd7.woff2",
+    "main.31a91223.css.map": "/static/css/main.31a91223.css.map",
+    "main.b4c1346e.js.map": "/static/js/main.b4c1346e.js.map",
     "453.e5058880.chunk.js.map": "/static/js/453.e5058880.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de37b364.css",
-    "static/js/main.af82abc1.js"
+    "static/css/main.31a91223.css",
+    "static/js/main.b4c1346e.js"
   ]
 }
