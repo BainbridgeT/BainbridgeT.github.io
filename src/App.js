@@ -79,7 +79,7 @@ function App() {
               <span>Relax Faster.</span>
             </h2>
             <p className="description">
-              Discover the best airport lounges and navigate with ease.
+            Effortless access. Seamless navigation. A better airport experience.
             </p>
             <a className="download-button">
               Coming to the app store soon!
@@ -88,7 +88,7 @@ function App() {
           <div className="image-section fade-in flex justify-center">
   <div className="iphone-container relative">
     <img
-      src="Image.png"
+      src="Image2.png"
       alt="LoungeNavigator App Preview"
       className="iphone-mockup"
     />
