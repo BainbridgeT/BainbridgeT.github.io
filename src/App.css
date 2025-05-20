@@ -21,7 +21,7 @@ body {
   justify-content: center;
   min-height: 50vh;
   background-color: #f7f7f7;
-  font-family: "Inter", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   width: 100%;
   position: relative; /* For positioning the mobile footer */
 }
@@ -147,7 +147,7 @@ body {
   font-weight: bold;
   color: #264653;
   line-height: 1.2;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 
 }
 
@@ -160,7 +160,7 @@ body {
   color: #555;
   margin-top: 20px;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
 
 }
 
@@ -178,8 +178,8 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
-
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
 }
 
 .download-button::before {
@@ -411,12 +411,15 @@ body {
   }
   
   .headline {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    font-family: 'Plus Jakarta Sans' !important;
+    font-size: 48px;
+    font-weight: 700;
+    color: #264653;
+    line-height: 1.2;
   }
+  
+  
+  
   
   .description {
     font-size: 16px;
@@ -424,6 +427,7 @@ body {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    font-weight: 600;
   }
   
   .download-button {
