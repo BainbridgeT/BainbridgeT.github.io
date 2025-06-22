@@ -1,5 +1,16 @@
 
-@font-face {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/inter"; /* defaults to 400 */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* @font-face {
   font-family: 'Quicksand';
   src: url('./assets/Quicksand-Medium.ttf') format('truetype');
   font-weight: normal;
@@ -13,17 +24,17 @@ body {
       sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 /* body {
   font-family: 'Quicksand', sans-serif;
 } */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 html, body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-}
+} */
