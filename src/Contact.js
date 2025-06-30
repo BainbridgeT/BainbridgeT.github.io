@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+// Contact.jsx or /contact route
+
 import { useState } from 'react';
 
-// Contact.jsx or /contact route
 export default function Contact() {
-    const [openFaq, setOpenFaq] = useState(null);
+  const [openFaq, setOpenFaq] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -33,89 +34,88 @@ export default function Contact() {
   ];
 
     return (
-<div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-      <div className="w-full max-w-4xl">
-        {/* Back to Home - Above Container */}
-        <div className="mb-6">
-          <a href="/" className="text-blue-600 text-sm font-medium hover:underline">
+      <div className="relative min-h-screen bg-gradient-to-br from-[#f9fafb] via-white to-[#f9fafb] p-8 md:p-12 overflow-hidden" data-aos='fade-up'>
+
+      {/* Floating blurred shapes for depth */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/2 right-0 w-80 h-80 bg-gradient-to-r from-pink-200/30 to-yellow-200/30 rounded-full blur-3xl animate-pulse-slow"></div>
+
+      <div className="relative w-full max-w-2xl mx-auto">
+
+        {/* Back to Home */}
+        <div className="mb-8">
+          <a href="/" className="text-gray-500 text-sm font-medium hover:text-gray-700 transition-colors">
             ← Back to Home
           </a>
         </div>
 
-        {/* Header Section - Outside Container */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Get In Touch</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're here to help you navigate airport lounges with ease. Whether you have questions, 
-            need support, or want to share feedback, our team is ready to assist you.
+        {/* Main Title */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight leading-tight">Contact</h1>
+          <p className="text-gray-500 text-xl mt-4 max-w-2xl mx-auto">
+            We’re here to help you get the most out of LoungeNavigator.
           </p>
         </div>
 
-        {/* Main Container */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          {/* Contact Us Section */}
-          <div className="px-8 py-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Contact Us</h2>
-            <div className="flex items-start justify-between gap-8">
-              {/* Left Side - Details */}
-              <div className="flex-1 flex flex-col">
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Our dedicated team is committed to providing exceptional support and ensuring your 
-                  airport lounge experience is seamless. We're passionate about helping travelers 
-                  discover and access the best lounges worldwide.
-                </p>
-                <a
-                  href="mailto:support@loungenavigator.com"
-                  className="w-full bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg text-center block"
-                >
-                  Contact Support
-                </a>
-              </div>
-              
-              {/* Right Side - App Logo */}
-              <div className="flex-shrink-0">
-                <div className="w-40 h-32 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg">
-                  <div className="text-white text-center">
-                    <div className="text-3xl font-bold mb-1">LN</div>
-                    <div className="text-xs opacity-90">Navigator</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Need Help Section */}
+        <div className="mb-20">
+          <div className="bg-white/50 backdrop-blur-md rounded-4xl premium-shadow p-12 md:p-16 transition hover:shadow-3xl">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-6">Need a hand?</h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Our support team is ready to help you get the most from Lounge Navigator—whether you’re finding lounges,
+              booking access, or navigating the app. We're here to assist with any questions or technical issues.
+            </p>
           </div>
+        </div>
 
-          {/* Separator Line */}
-          <div className="border-t border-gray-200 mx-8"></div>
+        {/* Questions Section */}
+        <div className="mb-20">
+          <div className="bg-white/50 backdrop-blur-md rounded-4xl premium-shadow p-12 md:p-16 transition hover:shadow-3xl">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-6">Got questions?</h2>
+            <p className="text-gray-600 text-lg leading-relaxed mb-10">
+              We’re passionate about helping travelers discover and access the best airport lounges worldwide. Our team
+              is committed to providing exceptional support and ensuring your lounge experience is seamless and enjoyable.
+            </p>
+            <a
+              href="mailto:support@loungenavigator.com"
+              className="flex w-full items-center justify-center border border-gray-300 text-gray-800 text-lg font-semibold px-8 py-5 rounded-2xl hover:bg-gray-100 active:scale-95 transition-all duration-300 shadow hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-200"
+            >
+              <svg
+                className="w-6 h-6 text-gray-700 mr-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12H8m8-4H8m8 8H8m12-8v8a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2z"/>
+              </svg>
+              support@loungenavigator.com
+            </a>
+          </div>
+        </div>
 
-          {/* FAQ Section */}
-          <div className="px-8 py-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+        {/* FAQ Section */}
+        <div className="mb-20">
+          <div className="bg-white/50 backdrop-blur-md rounded-4xl premium-shadow p-12 md:p-16 transition hover:shadow-3xl">
+            <h2 className="text-3xl font-semibold text-gray-900 mb-10">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg">
+                <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-4 text-left flex items-center gap-4 hover:bg-gray-100 transition-colors"
+                    className="faq-button w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300"
                   >
-                    <div className={`w-5 h-5 flex items-center justify-center transition-transform ${
-                      openFaq === index ? 'rotate-45' : ''
-                    }`}>
-                      <svg
-                        className="w-4 h-4 text-gray-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    <h3 className="font-medium text-gray-900 text-lg">{faq.question}</h3>
+                    <div className={`transform transition-transform duration-500 ${openFaq === index ? 'rotate-180' : ''}`}>
+                      <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
-                    <h3 className="font-semibold text-gray-800">{faq.question}</h3>
                   </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-4 ml-9">
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === index ? 'max-h-96' : 'max-h-0'}`}>
+                    <div className="px-6 pb-5 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
+                      <p className="text-gray-600 leading-relaxed pt-4 text-base">{faq.answer}</p>
                     </div>
-                  )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -123,7 +123,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
-
     );
   }
   
