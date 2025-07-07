@@ -1,5 +1,5 @@
 // main.js
-import IphoneMockup from './IphoneMockup';
+import IphoneMockup from '../iphoneMockup/IphoneMockup';
 
 export default function Main() {
   return (

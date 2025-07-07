@@ -1,10 +1,10 @@
 // Home.jsx
 import React from "react";
 import './index.css';
-import Main from "./main";
-import About from "./About";
-import IphoneMockup from "./IphoneMockup";
-import AppFeatures from "./AppFeatures";
+import Main from "./introSection/main";
+import About from "./about/About";
+import IphoneMockup from "./iphoneMockup/IphoneMockup";
+import AppFeatures from "./features/AppFeatures";
 import HowItWorksSection from "./howItWorks/howItWorks";
 
 export default function Home() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import IphoneMockup from './IphoneMockup';
+import IphoneMockup from '../iphoneMockup/IphoneMockup';
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 

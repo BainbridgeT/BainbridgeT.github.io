@@ -1,4 +1,4 @@
-import IphoneMockup from "./IphoneMockup";
+import IphoneMockup from "../iphoneMockup/IphoneMockup";
 import { useState, useEffect } from "react";
 
 export default function FeatureBlock({ title, description, screenshot, isAlt }) {

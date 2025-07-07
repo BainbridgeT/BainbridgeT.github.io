@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import Contact from './Contact';
+import Contact from './contact/Contact';
 import Layout from "./Layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
