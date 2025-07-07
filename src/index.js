@@ -1,7 +1,3 @@
-import '@fontsource/plus-jakarta-sans/400.css'; // Regular
-import '@fontsource/plus-jakarta-sans/700.css'; // Bold (optional, for headlines)
-
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

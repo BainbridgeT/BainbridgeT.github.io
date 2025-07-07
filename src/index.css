@@ -3,10 +3,124 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "@fontsource/inter"; /* defaults to 400 */
+/* Global Inter Variable font setup */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* improves ligatures & alternates in Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+body {
+  font-family: inherit; /* Inherit from :root */
+}
+
+
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes vertical-scroll-0 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes vertical-scroll-1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes vertical-scroll-2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes vertical-scroll-3 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes vertical-scroll-4 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-vertical-scroll-0 {
+  animation: vertical-scroll-0 30s linear infinite;
+}
+.animate-vertical-scroll-1 {
+  animation: vertical-scroll-1 35s linear infinite reverse;
+}
+.animate-vertical-scroll-2 {
+  animation: vertical-scroll-2 32s linear infinite;
+}
+.animate-vertical-scroll-3 {
+  animation: vertical-scroll-3 28s linear infinite reverse;
+}
+.animate-vertical-scroll-4 {
+  animation: vertical-scroll-4 34s linear infinite;
+}
+
+@keyframes smooth-ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-smooth-ping {
+  animation: smooth-ping 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes mapWiggle {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(2deg) scale(1.05); }
+  50% { transform: rotate(-2deg) scale(1.05); }
+  75% { transform: rotate(1deg) scale(1.02); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.hover-animate-map:hover {
+  animation: mapWiggle 0.6s ease-in-out;
+}
+
+a {
+  font-family: inherit !important;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.flip-transition {
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes carousel {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-carousel {
+  animation: carousel 20s linear infinite;
 }
 
 

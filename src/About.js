@@ -30,39 +30,37 @@ export default function About() {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
           >
-            <p className="text-sm uppercase tracking-widest text-gray-500 font-medium mb-2">
-              About Us
-            </p>
-            <h2 className="text-5xl lg:text-6xl font-bold text-black leading-tight mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight">
               Why{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand1 to-brand2">
-                LoungeNavigator ?
+              <span className="text-4xl md:text-5xl lg:text-6xl text-transparent font-semibold bg-clip-text bg-gradient-to-r from-brand1 to-brand2">
+                LoungeNavigator?
               </span>
             </h2>
 
-            <div className="space-y-6 text-xl text-gray-800 leading-relaxed font-light">
-              <p>
-                We're redefining the most overlooked part of your travel day — the time between TSA and takeoff.
-              </p>
+            <div className="space-y-6 text-xl text-gray-800 leading-relaxed font-light font-sans">
+  <p>
+    We're redefining the most overlooked part of your travel day — the time between TSA and takeoff.
+  </p>
 
-              <p>
-                LoungeNavigator helps you discover lounges you can actually access and guides you to them with real-time indoor navigation.
-              </p>
+  <p>
+    LoungeNavigator helps you discover lounges you can actually access and guides you to them with real-time indoor navigation.
+  </p>
 
-              <div className="pt-6">
-                <p className="text-lg text-gray-600 font-medium">
-                  ✈️ The first travel app built to guide you{' '}
-                  <span className="text-black font-semibold">from security to seat</span> — combining{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 font-semibold">
-                    lounge discovery
-                  </span>{' '}
-                  with real-time{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 font-semibold">
-                    indoor wayfinding
-                  </span>.
-                </p>
-              </div>
-            </div>
+  <div className="pt-6">
+    <p className="text-lg text-gray-600 font-medium">
+      ✈️ The first travel app to guide you{' '}
+      <span className="text-black font-semibold">from security to your seat</span>, combining{' '}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E76F51] to-[#FF7E5E] font-semibold">
+        lounge discovery
+      </span>{' '}
+      and real-time{' '}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E76F51] to-[#FF7E5E] font-semibold">
+        navigation inside the airport.
+      </span>
+    </p>
+  </div>
+</div>
+
           </div>
           {/* Right: iPhone Mockup */}
           <div className="relative w-full max-w-5xl h-[600px] mx-auto flex items-center justify-center">
