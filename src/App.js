@@ -6,6 +6,7 @@ import Contact from './contact/Contact';
 import Layout from "./Layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BetaSignupForm from "./betaForm/betaSignupForm";
 
 function App() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -64,6 +65,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/beta-sign-up" element={<BetaSignupForm />}/>
         </Route>
       </Routes>
     </Router>

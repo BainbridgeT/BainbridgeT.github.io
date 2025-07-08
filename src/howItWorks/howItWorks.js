@@ -23,16 +23,18 @@ function useIsMobile(breakpoint = 768) {
 
 export default function HowItWorksSection() {
   const [flippedCards, setFlippedCards] = useState([]);
+  const [modalCardIndex, setModalCardIndex] = useState(null);
 
   const handleCardClick = (index) => {
     if (isMobile) {
-      setFlippedCards([index]); // open modal instead of flip
+      setModalCardIndex(index); // show modal without flipping
     } else {
       setFlippedCards((prev) =>
         prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
       );
     }
   };
+  
   
 
   const isMobile = useIsMobile();
@@ -62,8 +64,8 @@ export default function HowItWorksSection() {
 
   <div className="flex flex-col gap-y-16 relative z-20">
   {steps.map((step, i) => {
-    const isFlipped = flippedCards.includes(i);
-    const shouldDim = flippedCards.length > 0 && !isFlipped;
+const isFlipped = !isMobile && flippedCards.includes(i);
+const shouldDim = flippedCards.length > 0 && !isFlipped;
 
     return (
       <div
@@ -92,10 +94,13 @@ className={`relative w-full rounded-3xl shadow-2xl transition-transform duration
     );
   })}
 </div>
-    {/* Fullscreen Modal Card */}
-    {flippedCards.length > 0 && isMobile && (
-  <CardModal step={steps[flippedCards[0]]} onClose={() => setFlippedCards([])} />
+{isMobile && modalCardIndex !== null && (
+  <CardModal
+    step={steps[modalCardIndex]}
+    onClose={() => setModalCardIndex(null)}
+  />
 )}
+
 
 </section>
 

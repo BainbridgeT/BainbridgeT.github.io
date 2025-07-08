@@ -56,7 +56,7 @@ const cardBrands = {
     return (
       <>
         {/* Front */}
-        <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-start p-8 md:p-12 space-y-8 overflow-y-auto backface-hidden">
+        <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-start p-8 md:p-12 space-y-8 overflow-hidden backface-hidden">
           {/* Title */}
           <h3 className="text-4xl md:text-5xl font-semibold text-gray-900 tracking-tight text-center leading-tight">
             {step.title}
@@ -82,7 +82,7 @@ const cardBrands = {
         </div>
   
         {/* Back */}
-        <div className="absolute inset-0 bg-gray-50 rounded-3xl shadow-2xl flex flex-col items-start justify-start pt-32 pl-16 md:pl-32 pr-8 md:pr-12 backface-hidden rotate-x-180 overflow-y-auto">
+        <div className="absolute inset-0 bg-gray-50 rounded-3xl shadow-2xl flex flex-col items-start justify-start pt-32 pl-16 md:pl-32 pr-8 md:pr-12 backface-hidden rotate-x-180 overflow-hidden">
   <div className="max-w-2xl">
     <h4 className="text-2xl md:text-3xl font-bold text-black leading-tight mb-4">
       {step.backTitle}

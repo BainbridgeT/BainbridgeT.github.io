@@ -29,7 +29,7 @@ export const steps = [
     title: "Discover Lounges",
     backTitle: "Your Lounge Guide, Simplified",
     backText: "Explore lounges around the world at a glance. Browse detailed listings with photos, amenities, access policies, and real-time crowd insights. LoungeNavigator makes finding your next lounge easy — no more juggling apps or hunting for outdated info.",
-    image: "loungeList.png",
+    image: "loungeListMap2.png",
   },
   {
     type: "navigate",

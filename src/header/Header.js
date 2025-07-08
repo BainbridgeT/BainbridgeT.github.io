@@ -86,7 +86,7 @@ export default function Header() {
 {/* Right: Download Button - Only show on lg and up */}
 <div className="hidden lg:block">
   <a
-    href=""
+    href="/beta-sign-up"
     className="px-4 py-2 text-base bg-brand1 text-white font-medium rounded-full hover:bg-brand2 transition-all duration-300 hover:scale-105"
   >
     <span className="hidden md:inline">Download on iOS</span>

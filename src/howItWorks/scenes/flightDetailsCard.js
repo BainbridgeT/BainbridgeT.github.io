@@ -1,6 +1,7 @@
 
 import FlipButton from "../flipButton";
 import { IoClose } from "react-icons/io5";
+import IphoneMockup from "../../iphoneMockup/IphoneMockup";
 
 export default function FlightDetailsCard({ step, isFlipped, onFlip }) {
   const pillRows = [
@@ -47,17 +48,19 @@ export default function FlightDetailsCard({ step, isFlipped, onFlip }) {
       </div>
 
       {/* Back */}
-      <div className="absolute inset-0 bg-gray-50 rounded-3xl flex flex-col items-start justify-start pt-32 pl-16 md:pl-32 pr-8 md:pr-12 backface-hidden rotate-x-180 overflow-y-auto">
-  <div className="max-w-2xl">
-    <h4 className="text-2xl md:text-3xl font-bold text-black leading-tight mb-6">
+      <div className="absolute inset-0 bg-gray-50 rounded-3xl flex flex-col md:flex-row items-start justify-start pt-24 px-8 md:pt-32 md:px-16 gap-8 backface-hidden rotate-x-180 overflow-hidden">
+  {/* Left: Text Content */}
+  <div className="flex-1 max-w-2xl space-y-6">
+    <h4 className="text-2xl md:text-3xl font-bold text-black leading-tight">
       {step.backTitle}
     </h4>
 
     <p className="text-gray-500 text-xl md:text-2xl leading-relaxed font-light">
       {step.backText}
     </p>
-    {/* Optional: Show a few sample pills on the back */}
-    <div className="flex flex-wrap gap-2 justify-start mt-8">
+
+    {/* Pills */}
+    <div className="flex flex-wrap gap-2 justify-start mt-4">
       <span className="rounded-full px-4 py-2 text-sm font-medium text-gray-600 bg-gray-200">
         Your Gate
       </span>
@@ -68,11 +71,18 @@ export default function FlightDetailsCard({ step, isFlipped, onFlip }) {
         Destination
       </span>
     </div>
+
+    <FlipButton onClick={onFlip} icon={<IoClose />} />
   </div>
 
-  <FlipButton onClick={onFlip} icon={<IoClose />} />
-
+  {/* Right: Mockup */}
+  <div className="flex-1 flex items-center justify-center -mt-4 md:-mt-6">
+    <div className="w-48 md:w-60 lg:w-72">
+      <IphoneMockup screenshotSrc="explore2.png" />
+    </div>
+  </div>
 </div>
+
 
     </>
   );

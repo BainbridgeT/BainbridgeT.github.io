@@ -66,7 +66,7 @@ export default function About() {
           <div className="relative w-full max-w-5xl h-[600px] mx-auto flex items-center justify-center">
             {/* Center phone */}
             <div
-              className="absolute hidden md:block"
+              className="absolute"
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-easing="ease-out-cubic"
