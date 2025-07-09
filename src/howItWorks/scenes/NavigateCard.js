@@ -1,6 +1,7 @@
 import { IoClose } from 'react-icons/io5';
 import FlipButton from '../flipButton';
 import IphoneMockup from '../../iphoneMockup/IphoneMockup'; 
+import { FaPlus } from "react-icons/fa6";
 
 export default function NavigateCard({ step, onFlip }) {
   return (
@@ -34,15 +35,23 @@ export default function NavigateCard({ step, onFlip }) {
       {step.backText}
     </p>
 
-    <FlipButton onClick={onFlip} icon={<IoClose />} />
+    <FlipButton
+  onClick={onFlip}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+/>
+
   </div>
 
-  {/* Right: Mockup */}
-  <div className="flex-1 flex items-center justify-center -mt-">
+
+{/* Right: Phone mockup, visually raised up into card */}
+<div className="flex-1 flex items-center justify-center -mt-16 md:-mt-20 lg:-mt-24 relative z-10">
   <div className="w-48 md:w-60 lg:w-72">
-    <IphoneMockup screenshotSrc="splashScreen.png" />
+    <IphoneMockup screenshotSrc="navigation.png" />
   </div>
 </div>
+
+
+
 
 </div>
 

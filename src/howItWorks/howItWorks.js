@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import FlightDetailsCard from "./scenes/flightDetailsCard";
@@ -8,6 +8,7 @@ import ExploreLoungesCard from "./scenes/exploreLoungeCard";
 import AddCardsCard from "./scenes/addCardsCard";
 import NavigateCard from "./scenes/NavigateCard";
 import DownloadAppCard from "./scenes/downloadAppCard";
+import FlipButton from "./flipButton";
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
@@ -24,7 +25,9 @@ function useIsMobile(breakpoint = 768) {
 export default function HowItWorksSection() {
   const [flippedCards, setFlippedCards] = useState([]);
   const [modalCardIndex, setModalCardIndex] = useState(null);
-
+  const cardRefs = useRef([]);
+  cardRefs.current = steps.map((_, i) => cardRefs.current[i] ?? React.createRef());
+  
   const handleCardClick = (index) => {
     if (isMobile) {
       setModalCardIndex(index); // show modal without flipping
@@ -35,6 +38,24 @@ export default function HowItWorksSection() {
     }
   };
   
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (flippedCards.length === 0) return;
+  
+      const isClickInsideAnyCard = cardRefs.current.some((ref, index) => {
+        return flippedCards.includes(index) && ref.current?.contains(event.target);
+      });
+  
+      if (!isClickInsideAnyCard) {
+        setFlippedCards([]); // Reset all flipped cards
+      }
+    }
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [flippedCards]);
   
 
   const isMobile = useIsMobile();
@@ -67,31 +88,32 @@ export default function HowItWorksSection() {
 const isFlipped = !isMobile && flippedCards.includes(i);
 const shouldDim = flippedCards.length > 0 && !isFlipped;
 
-    return (
-      <div
-        key={i}
-        className={`w-full max-w-5xl mx-auto [perspective:1500px] relative cursor-pointer group transition-opacity duration-500 ${
-          shouldDim ? "opacity-30 pointer-events-none" : "opacity-100"
-        }`}
-        onClick={() => handleCardClick(i)}
-      >
-        <div
-className={`relative w-full rounded-3xl shadow-2xl transition-transform duration-1000 transform-style-preserve-3d ${
-  isFlipped ? "rotate-x-180" : ""
-} ${isMobile ? "aspect-[3/4]" : "aspect-[16/9]"}`}
+return (
+  <div
+    key={i}
+    ref={cardRefs.current[i]} // 👈 add this
+    className={`w-full max-w-5xl mx-auto [perspective:1500px] relative cursor-pointer group transition-opacity duration-500 ${
+      shouldDim ? "opacity-30 pointer-events-none" : "opacity-100"
+    }`}
+    onClick={() => handleCardClick(i)}
+  >
+    <div
+      className={`relative w-full rounded-3xl shadow-2xl transition-transform duration-1000 transform-style-preserve-3d ${
+        isFlipped ? "rotate-x-180" : ""
+      } ${isMobile ? "aspect-[3/4]" : "aspect-[16/9]"}`}
+    >
+      <StepCard
+        step={step}
+        isFlipped={isFlipped}
+        onFlip={(e) => {
+          e.stopPropagation();
+          handleCardClick(i);
+        }}
+      />
+    </div>
+  </div>
+);
 
->
-          <StepCard
-            step={step}
-            isFlipped={isFlipped}
-            onFlip={(e) => {
-              e.stopPropagation();
-              handleCardClick(i);
-            }}
-          />
-        </div>
-      </div>
-    );
   })}
 </div>
 {isMobile && modalCardIndex !== null && (
@@ -127,13 +149,12 @@ const StepCard = ({ step, isFlipped, onFlip }) => {
 
   const CardModal = ({ step, onClose }) => (
     <div className="fixed inset-0 z-50 bg-white overflow-auto flex flex-col items-center justify-center p-6">
-      <button
-        className="absolute top-6 right-6 text-black text-3xl font-bold"
-        onClick={onClose}
-        aria-label="Close"
-      >
-        &times;
-      </button>
+<FlipButton
+  onClick={onClose}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+  className="absolute top-6 right-6 z-30"
+/>
+
       <div className="max-w-2xl w-full space-y-4">
         <h2 className="text-3xl font-bold text-black">{step.backTitle}</h2>
         <p className="text-lg text-gray-700 whitespace-pre-line">

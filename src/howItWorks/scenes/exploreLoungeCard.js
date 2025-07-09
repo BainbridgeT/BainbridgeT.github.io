@@ -1,5 +1,7 @@
 import FlipButton from "../flipButton";
 import { IoClose } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
+import IphoneMockup from "../../iphoneMockup/IphoneMockup";
 
 export default function ExploreLoungesCard({ step, isFlipped, onFlip }) {
     return (
@@ -14,17 +16,15 @@ export default function ExploreLoungesCard({ step, isFlipped, onFlip }) {
     </h3>
   </div>
 
-  {/* Right: Screenshot */}
   {step.image && (
-    <div className="flex-1 flex justify-center items-center mt-8 md:mt-0">
-      <img
-        src={step.image}
-        alt=""
-        className="w-52 md:w-64 lg:w-72" // ⬅️ Larger sizes
-        style={{ background: 'none' }} // ensure no background is added
-      />
+  <div className="flex-1 flex justify-center items-center mt-8 md:mt-0">
+    <div className="w-56 md:w-64 lg:w-72">
+      <IphoneMockup screenshotSrc="loungeListMap2.png" />
     </div>
-  )}
+  </div>
+)}
+
+
 
   <FlipButton onClick={onFlip} />
 </div>
@@ -40,17 +40,11 @@ export default function ExploreLoungesCard({ step, isFlipped, onFlip }) {
     </p>
   </div>
 
-  {step.image && (
-    <div className="flex-1 flex justify-center items-center mt-8 md:mt-0">
-      <img
-        src={step.image}
-        alt=""
-        className="w-full max-w-xs md:max-w-sm rounded-2xl shadow-lg object-cover"
-      />
-    </div>
-  )}
 
-<FlipButton onClick={onFlip} icon={<IoClose />} />
+<FlipButton
+  onClick={onFlip}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+/>
 
 </div>
 

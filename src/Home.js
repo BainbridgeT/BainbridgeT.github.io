@@ -66,10 +66,10 @@ export default function Home() {
           </p>
       
           <a
-            href="https://apps.apple.com/app/lounge-navigator"
+            href="/beta-sign-up"
             className="inline-block bg-brand1 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-brand2 transition-all duration-300 hover:scale-105"
           >
-            Download on iOS
+            Join our Beta
           </a>
       
         </div>

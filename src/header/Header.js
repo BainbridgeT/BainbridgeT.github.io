@@ -89,7 +89,7 @@ export default function Header() {
     href="/beta-sign-up"
     className="px-4 py-2 text-base bg-brand1 text-white font-medium rounded-full hover:bg-brand2 transition-all duration-300 hover:scale-105"
   >
-    <span className="hidden md:inline">Download on iOS</span>
+    <span className="hidden md:inline">Join our Beta</span>
     <span className="md:hidden">Download</span>
   </a>
 </div>
@@ -104,10 +104,10 @@ export default function Header() {
             <a href="#about" className="block text-base text-gray-700 py-2 hover:text-brand2 transition-colors">About</a>
             <a href="#contact" className="block text-base text-gray-700 py-2 hover:text-brand2 transition-colors">Contact</a>
             <a
-              href=""
-              className="block bg-brand1 text-white text-base font-medium px-4 py-2 rounded-full hover:bg-brand2 mt-3 transition-all duration-300 hover:scale-105"
+    href="/beta-sign-up"
+    className="block bg-brand1 text-white text-base font-medium px-4 py-2 rounded-full hover:bg-brand2 mt-3 transition-all duration-300 hover:scale-105"
             >
-              Download on iOS
+              Join our Beta
             </a>
           </div>
         )}

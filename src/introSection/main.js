@@ -16,7 +16,7 @@ export default function Main() {
 
 <div className="flex flex-wrap justify-center gap-4 mt-4">
       <a
-        href="#download"
+        href="/beta-sign-up"
         className="font-sans bg-brand1 text-white text-sm font-medium px-6 py-2 rounded-full hover:bg-brand2 transition"
       >
         Try LoungeNavigator

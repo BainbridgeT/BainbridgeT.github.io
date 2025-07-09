@@ -2,6 +2,7 @@
 import FlipButton from "../flipButton";
 import { IoClose } from "react-icons/io5";
 import IphoneMockup from "../../iphoneMockup/IphoneMockup";
+import { FaPlus } from "react-icons/fa6";
 
 export default function FlightDetailsCard({ step, isFlipped, onFlip }) {
   const pillRows = [
@@ -72,12 +73,15 @@ export default function FlightDetailsCard({ step, isFlipped, onFlip }) {
       </span>
     </div>
 
-    <FlipButton onClick={onFlip} icon={<IoClose />} />
+    <FlipButton
+  onClick={onFlip}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+/>
   </div>
 
   {/* Right: Mockup */}
   <div className="flex-1 flex items-center justify-center -mt-4 md:-mt-6">
-    <div className="w-48 md:w-60 lg:w-72">
+    <div className="w-60 md:w-72 lg:w-80">
       <IphoneMockup screenshotSrc="explore2.png" />
     </div>
   </div>

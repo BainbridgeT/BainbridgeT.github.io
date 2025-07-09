@@ -14,11 +14,12 @@ export default function DownloadAppCard({ step, isFlipped, onFlip }) {
 
     {/* Download button */}
     <button
-      className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-white text-black font-semibold text-lg shadow hover:scale-105 active:scale-95 transition-transform duration-200"
-      onClick={() => window.open("https://your-download-link", "_blank")}
-    >
-      <span>{step.download}</span>
-    </button>
+  className="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-white text-black font-semibold text-lg shadow hover:scale-105 active:scale-95 transition-transform duration-200"
+  onClick={() => (window.location.href = "/beta-sign-up")}
+>
+  <span>{step.download}</span>
+</button>
+
     <FlipButton onClick={onFlip} />
 
   </div>
@@ -39,7 +40,10 @@ export default function DownloadAppCard({ step, isFlipped, onFlip }) {
     </p>
   </div>
 
-  <FlipButton onClick={onFlip} icon={<IoClose />} />
+  <FlipButton
+  onClick={onFlip}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+/>
 
 </div>
 

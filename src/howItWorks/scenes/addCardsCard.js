@@ -1,5 +1,6 @@
 import FlipButton from "../flipButton";
 import { IoClose } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
 
 const cardBrands = {
     "Capital One Venture X®": { color: "#0D1F2D", textColor: "#fff" },
@@ -93,8 +94,10 @@ const cardBrands = {
     </p>
   </div>
 
-  <FlipButton onClick={onFlip} icon={<IoClose />} />
-
+  <FlipButton
+  onClick={onFlip}
+  icon={<FaPlus size={28} className="rotate-45 transition-transform" />}
+/>
 </div>
 
       </>

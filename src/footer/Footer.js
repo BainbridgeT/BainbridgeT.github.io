@@ -34,7 +34,7 @@ export default function Footer() {
         <h3 className="text-lg font-semibold text-black mb-4">Product</h3>
         <div className="space-y-3 text-sm">
           <a href="#features" className="block text-gray-700 hover:text-black transition">Features</a>
-          <a href="#download" className="block text-gray-700 hover:text-black transition">Download</a>
+          <a href="/beta-sign-up" className="block text-gray-700 hover:text-black transition">Join our Beta</a>
         </div>
       </div>
 
